@@ -20,7 +20,7 @@ addTestSuiteForDir('latestDepTest', 'test')
 
 dependencies {
   compileOnly group: 'org.mongodb', name: 'mongodb-driver-sync', version: '4.0.0'
-  compileOnly group: 'org.mongodb', name: 'mongodb-driver-reactivestreams', version: '4.0.0'
+  compileOnly group: 'org.mongodb', name: 'mongodb-driver-reactivestreams', version: '4.10.2'
 
   testImplementation(project(':dd-java-agent:instrumentation:mongo:common')) {
     transitive = false
@@ -37,7 +37,7 @@ dependencies {
   testImplementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
 
   testImplementation group: 'org.mongodb', name: 'mongodb-driver-sync', version: '4.0.1'
-  testImplementation group: 'org.mongodb', name: 'mongodb-driver-reactivestreams', version: '4.0.1'  // race condition bug in 4.0.0
-  latestDepTestImplementation group: 'org.mongodb', name: 'mongodb-driver-reactivestreams', version: '4.2+'
+  testImplementation group: 'org.mongodb', name: 'mongodb-driver-reactivestreams', version: '4.10.2'  // race condition bug in 4.0.0
+  latestDepTestImplementation group: 'org.mongodb', name: 'mongodb-driver-reactivestreams', version: '4.10+'
   latestDepTestImplementation group: 'org.mongodb', name: 'mongodb-driver-sync', version: '4.2+'
 }
